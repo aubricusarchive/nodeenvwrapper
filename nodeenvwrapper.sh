@@ -1,6 +1,7 @@
 # A 'virtualenvwrapper-style' extensions for nodeenv.
 # see: https://github.com/ekalinin/nodeenv
 # see: http://www.doughellmann.com/projects/virtualenvwrapper/
+# see: https://github.com/pypa/virtualenv
 
 # Copyright 2012 Aubrey Taylor 
 #
@@ -53,8 +54,8 @@
 #	alias chnenv='workon_nodeenv $1'
 #	alias dnenv='deactivate_node'
 
-# Thanks to Doug Hellmann for the inspiration here and to Ian Bicking for
-# virtualenv and inspiring nodeenv.
+# Thanks to Doug Hellmann for the inspiration here, Ian Bicking for
+# virtualenv and Eugene Kalinin for writing nodeenv!
 
 # mknodenv
 # make nodeenv
