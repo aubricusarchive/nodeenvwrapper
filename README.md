@@ -9,7 +9,7 @@ see: http://www.doughellmann.com/projects/virtualenvwrapper/
 see: https://github.com/pypa/virtualenv
 
 ###Setup: 
-Pretty straightforward, in a .profile / .bashrc / .bash_profile which ever you prefer add the following lines:
+Pretty straightforward, in a .profile or .bashrc or .bash_profile add the following lines:
 ```
 export NODEENVWRAPPER_SCRIPT=/path/to/nodeenvwrapper.sh
 export NODEENV_HOME=$HOME/.nodeenv
@@ -18,7 +18,7 @@ source NODEENVWRAPPER_SCRIPT
 That should get it working, though you may need to restart your terminal session depending on your setup.
 
 ###Aliases that I've found useful:
-Put these in your .profile || .bashrc || .bash_profile
+Put these in your .profile or .bashrc or .bash_profile
 ```
 alias mknenv='mknodeenv $1'
 alias rmnenv='rmnodeenv $1'
