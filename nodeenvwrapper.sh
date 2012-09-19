@@ -16,46 +16,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# NOTE: I did not write nodeenv, this is just a simple util to improve
-# it's workflow.
-
-# NOTE: Doug Hellmann's virtualenvwrapper is well written and well tested
-# across many shells and environments. This code is not. I run this
-# in bash on my OSX machine running Lion (OSX 10.7.4). As such
-# this code may fail miserably for you. Feel free to fork / pull
-# request if you like! 
-
-# NOTE: In general this follows the same conventions as virtualenvwrapper.
-# Unlike virtualenvwrapper however there are no real safeguards / 
-# checks when this thing is modifying your folder structure. I've
-# tried to keep the below clean but my shell scripting is only so-so.
-# PLEASE USE CAUTION when running these utility methods!
-
-# NOTE: Running this with virtualenv and / or virtualenvwrapper? Some weird
-# things can happen when activating / deactivating nodeenv and virtualenv
-# environments when working in the same terminal session. I've found
-# it beneficial to run your virtualenv and nodeenv in separate
-# terminal windows.
-
-# SETUP: Pretty straightforward, in a .profile / .bashrc / .bash_profile
-# which ever you prefer add the following lines:
-#
-#	export NODEENVWRAPPER_SCRIPT=/path/to/nodeenvwrapper.sh
-#	export NODEENV_HOME=$HOME/.nodeenv
-#	source NODEENVWRAPPER_SCRIPT
-#
-# That should get it working, though you may need to restart your
-# terminal session depending on your setup.
-
-# USEFUL ALIASES:
-#	alias mknenv='mknodeenv $1'
-#	alias rmnenv='rmnodeenv $1'
-#	alias chnenv='workon_nodeenv $1'
-#	alias dnenv='deactivate_node'
-
-# Thanks to Doug Hellmann for the inspiration here, Ian Bicking for
-# virtualenv and Eugene Kalinin for writing nodeenv!
+# 
+# see: http://github.com/aubricus/nodeenvwrapper for documentation and notes.
 
 # mknodenv
 # make nodeenv
