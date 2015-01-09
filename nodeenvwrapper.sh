@@ -22,9 +22,10 @@
 # mknodenv
 # make nodeenv
 # takes param $node_env, e.g. 'mknodeenv my_env'
-# only supports basic optionless call to nodeenv for the moment
+# takes options passed after $node_env
 mknodeenv(){
 	node_env=$1
+	args=${*:2}
 	
 	type deactivate_node >/dev/null 2>&1
 
@@ -32,7 +33,7 @@ mknodeenv(){
 		deactivate_node
 	fi
 
-	nodeenv "$NODEENV_HOME$node_env"
+	nodeenv "$NODEENV_HOME$node_env" $args
 	workon_nodeenv $node_env
 }
 
