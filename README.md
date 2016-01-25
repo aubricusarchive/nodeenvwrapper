@@ -8,12 +8,12 @@ see: http://www.doughellmann.com/projects/virtualenvwrapper/
 
 see: https://github.com/pypa/virtualenv
 
-###Setup: 
+###Setup:
 Pretty straightforward, in a .profile or .bashrc or .bash_profile add the following lines:
 ```
 export NODEENVWRAPPER_SCRIPT=/path/to/nodeenvwrapper.sh
 export NODEENV_HOME=$HOME/.nodeenv
-source NODEENVWRAPPER_SCRIPT
+source $NODEENVWRAPPER_SCRIPT
 ```
 That should get it working, though you may need to restart your terminal session depending on your setup.
 
@@ -28,7 +28,7 @@ alias dnenv='deactivate_node'
 ###Notes:
 I did not write nodeenv, this is just a simple util to improve it's workflow.
 
-Doug Hellmann's virtualenvwrapper is well written and well tested across many shells and environments. This code is not. I run this in bash on my OSX machine running Lion (OSX 10.7.4). As such this code may fail miserably for you. Feel free to fork / pull request if you like! 
+Doug Hellmann's virtualenvwrapper is well written and well tested across many shells and environments. This code is not. I run this in bash on my OSX machine running Lion (OSX 10.7.4). As such this code may fail miserably for you. Feel free to fork / pull request if you like!
 
 In general this follows the same conventions as virtualenvwrapper.Unlike virtualenvwrapper however there are no real safeguards / checks when this thing is modifying your folder structure. I've tried to keep the below clean but my shell scripting is only so-so. PLEASE USE CAUTION when running these utility methods!
 
