@@ -3,7 +3,7 @@
 # see: http://www.doughellmann.com/projects/virtualenvwrapper/
 # see: https://github.com/pypa/virtualenv
 
-# Copyright 2012 Aubrey Taylor 
+# Copyright 2012 Aubrey Taylor
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# 
+#
 # see: http://github.com/aubricus/nodeenvwrapper for documentation and notes.
 
 # mknodenv
@@ -26,14 +26,14 @@
 mknodeenv(){
 	node_env=$1
 	args=${*:2}
-	
+
 	type deactivate_node >/dev/null 2>&1
 
-	if [ $? -eq 0 ]; then	
+	if [ $? -eq 0 ]; then
 		deactivate_node
 	fi
 
-	nodeenv "$NODEENV_HOME$node_env" $args
+	nodeenv "$NODEENV_HOME/$node_env" $args
 	workon_nodeenv $node_env
 }
 
@@ -42,14 +42,14 @@ mknodeenv(){
 # takes param $env_name, e.g. 'workon_nodeenv my_env'
 workon_nodeenv(){
 	node_env=$1
-	
-	type deactivate_node >/dev/null 2>&1	
-	
+
+	type deactivate_node >/dev/null 2>&1
+
 	if [ $? -eq 0 ]; then
 		deactivate_node
 	fi
-	
-	source "$NODEENV_HOME$node_env/bin/activate"
+
+	source "$NODEENV_HOME/$node_env/bin/activate"
 }
 
 # rmnodeenv
@@ -57,7 +57,7 @@ workon_nodeenv(){
 # takes param $env_name, e.g. 'rmnodeenv my_env'
 rmnodeenv(){
 	node_env=$1
-	rm -r "$NODEENV_HOME$node_env"
+	rm -r "$NODEENV_HOME/$node_env"
 }
 
 # cdnodeenv
@@ -65,7 +65,7 @@ rmnodeenv(){
 # takes param $env_name, e.g. 'cdnodeenv my_env'
 cdnodeenv(){
 	node_env=$1
-	cd "$NODEENV_HOME$node_env"
+	cd "$NODEENV_HOME/$node_env"
 }
 
 # lsnodeenv

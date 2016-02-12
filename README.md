@@ -9,11 +9,13 @@ see: http://www.doughellmann.com/projects/virtualenvwrapper/
 see: https://github.com/pypa/virtualenv
 
 ###Setup:
-Pretty straightforward, in a .profile or .bashrc or .bash_profile add the following lines:
+Pretty straightforward, clone the repository
+`git clone https://github.com/aubricus/nodeenvwrapper.git $HOME/.nodeenvwrapper`
+
+and in a .profile or .bashrc or .bash_profile add the following lines:
 ```
-export NODEENVWRAPPER_SCRIPT=/path/to/nodeenvwrapper.sh
 export NODEENV_HOME=$HOME/.nodeenv
-source $NODEENVWRAPPER_SCRIPT
+source /path/to/nodeenvwrapper.sh
 ```
 That should get it working, though you may need to restart your terminal session depending on your setup.
 
